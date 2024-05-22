@@ -2,21 +2,110 @@
 
 
 body {
-  background-color: #6598ab;
+  background-color: #15151a;
   font-family: "Chakra Petch", sans-serif;
 }
 
-section{
+section {
   width: 1200px;
   margin: 0 auto;
 }
 
-header .logotipo{
+header .logotipo {
   float: left;
 }
-header .suporte{
+
+header .suporte {
   float: right;
+  margin-top: 20px;
 }
-.logotipo img{
-  width: 150px;
+
+.logotipo img {
+  width: 65px;
+}
+
+.menuitem li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.menu,
+.menuitem {
+  display: inline;
+}
+
+.header {
+  margin: 20px 0;
+}
+
+.menuitem li a {
+  color: #abaaaa;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.menu {
+  margin: 0 100px;
+}
+
+.menuitem li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #1434A4;
+  padding-bottom: 36px;
+  transition: 0.3s;
+}
+
+header {
+  border-bottom: 1px solid #272727;
+  z-index: 2;
+  position: relative;
+}
+
+.suporte a {
+  text-decoration: none;
+  color: #057414;
+  background-color: #272727;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+/* deixa a opacidade padrao com uma "animação"*/
+.hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* serve para dar um efeito de "sombreado" deixanda um pouco escuro diminuindo a opacidade ao passar o mouse onde esta a classe hover */
+.hover:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.slider {
+  background-image: url(img/duna2.jpg);
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+  /* gerencia as camandas, especifica a ordem de sobreposição dos elementos na tela
+  eixo Z é responsável pelo cálculo e posicionamento da profundidade de um determinado elemento em relação à tela, 
+  se estará mais afastado ou mais próximo. Sem a propriedade z-index definida, por padrão, os elementos recebem o valor automático que é z-index: auto. 
+  o posicionamento é sequencial, em ordem crescente - o z-index de menor valor é o elemento mais profundo 
+  enquanto o z-index de maior valor é o mais próximo da tela.*/
+  top: -151px;
+  position: relative;
+  opacity: 0.3;
+}
+
+h1 {
+  text-align: center;
+  top: 150px; /* Defina a borda superior do elemento <div> posicionado 150px abaixo da borda superior de seu ancestral posicionado mais próximo: 
+  "da uma distancia do topo, do elemento mais proximo, (%) também funciona as vezes"*/
+  position: relative;
+  color: #abaaaa;
+  font-size: 50px;
+  z-index: 3;
 }

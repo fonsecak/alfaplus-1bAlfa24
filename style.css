@@ -109,3 +109,117 @@ h1 {
   font-size: 50px;
   z-index: 3;
 }
+
+.destaques {
+  text-align: center;
+}
+
+.destaques .item {
+    width: 15%;
+    display: inline-block;
+    margin: 0.5%;
+    position: relative; /* sem isso não funcina o position do overlay de aparecer um texto na imagem sobrepondo */
+}
+
+.destaques .titulo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute; /* (absolute) deixa o item livre para por onde quiser */
+  background-image: linear-gradient(to top,#000,#00000000);
+  bottom: 0;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.destaques .item img{
+    width: 100%;
+    height: 265px;
+}
+
+.destaques .imagem {
+  border-radius: 10px;
+  overflow: hidden; /* Pesquisar o que é isso */
+  
+}
+
+.titulo-categoria {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #272727;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+footer {
+  background: #272727;
+  color: #abaaaa;
+  font-size: 23px;
+  padding: 50px 0;
+  line-height: 40px;
+  text-align: center;
+}
+
+footer a{
+  color: #abaaaa;
+  text-decoration: none;
+}
+
+.sociais li {
+  display: inline-block;
+}
+
+.col {
+  width: 33%;
+  display: inline-block;
+}
+
+footer i{
+  font-size: 40px;
+  padding: 5px;
+}
+
+.mobile {
+  display: none;
+}
+
+.mostrar-mobile {
+  display: none;
+}
+
+.esconder-mobile {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .mostrar-mobile {
+    display: block;
+  }
+
+  .esconder-mobile {
+    display: none;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .destaques .item {
+    width: 100%;
+  }
+  
+  .destaques .imagem img {
+    height: auto; /* serve pra daixar a altura automatica sem quebrar muito pelo oque entendi*/
+  }
+
+  .item {
+    max-width: 350px;
+    padding: 18px 0;
+  }
+
+  .destaques{
+    text-align: center;
+  }
+}
